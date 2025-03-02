@@ -1,34 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { LinkBreak2Icon } from '@radix-ui/react-icons'
+import { Avatar, Box, Flex, Heading, Separator, Text } from '@radix-ui/themes'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Flex p={"3"} direction="column" gap="2">
+      <Flex py={"2"} gap={"2"} align={"center"}>
+        <Avatar fallback={"BG"} src="https://baggit.com/cdn/shop/files/fav-icon.png" />
+        <Box>
+          <Heading size={"4"}>Shopify Theme Helper</Heading>
+          <Text as="p" size={"1"}>A simple tool to help you preview your Shopify theme</Text>
+        </Box>
+      </Flex>
+      <Separator my={"2"} size="4" />
+      <Flex mx={"auto"} my={"6"} width={"90%"} gap={"2"} direction={"column"} justify={"center"} align={"center"}>
+        <LinkBreak2Icon color='red'/>
+        <Text as='p' weight={'bold'}>This is not a Shopify store.</Text>
+        <Text as='p' align={"center"} size={"1"}>If you believe it is, please reopen the extension or refresh the page.</Text>
+      </Flex>
+    </Flex>
   )
 }
 
