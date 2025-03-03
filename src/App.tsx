@@ -1,5 +1,5 @@
-import { LinkBreak2Icon } from '@radix-ui/react-icons'
 import { Avatar, Box, Flex, Heading, Separator, Text } from '@radix-ui/themes'
+import NotFound from './assets/404.gif'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </Flex>
       <Separator my={"2"} size="4" />
       <Flex mx={"auto"} my={"6"} width={"90%"} gap={"2"} direction={"column"} justify={"center"} align={"center"}>
-        <LinkBreak2Icon color='red'/>
+        <img src={NotFound} width={150}/>
         <Text as='p' weight={'bold'}>This is not a Shopify store.</Text>
         <Text as='p' align={"center"} size={"1"}>If you believe it is, please reopen the extension or refresh the page.</Text>
       </Flex>
